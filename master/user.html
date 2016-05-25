@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>用户管理</title>
+	<link rel="stylesheet" type="text/css" href="../Resource/CSS/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/demo.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/icon.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/main.css">
+    <script type="text/javascript" src="../Resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Resource/js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../Resource/js/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="subbody">
+	<table width="100%" height="100%">
+		<tr valign="top">
+			<td align="center">
+				<table width="100%" height="100%">
+				<p></p>
+					<tr height="20px" valign="top">
+						<td>
+							<a href="userEdit.html" class="easyui-linkbutton" data-options="iconCls:'icon-add'">&nbsp;新&nbsp;&nbsp;&nbsp;增</a>
+						</td>
+						<td align="right" nowrap="nowrap">
+							所属部门：
+							<select id="cc" class="easyui-combotree" data-options="url:'_tree_dept.json',method:'get',lines:true" style="width:200px;height:26px">
+							</select>&nbsp;&nbsp;
+							账号：&nbsp;
+							<input class="easyui-textbox" style="width: 150px;height: 26px" value="">&nbsp;&nbsp;
+							姓名：&nbsp;
+							<input class="easyui-textbox" style="width: 150px;height: 26px" value="">&nbsp;&nbsp;
+							<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">&nbsp;查&nbsp;&nbsp;询</a>
+						</td>
+					</tr>
+					<tr valign="top">
+						<td colspan="3">
+							<table class="easyui-datagrid" style="width:100%;height: 100%" data-options="singleSelect:true,collapsible:true,method:'get'">
+								<thead>
+									<tr>
+										<th data-options="field:'no',width:50,halign:'center',align:'center'"> 序号 </th>
+										<th data-options="field:'name',width:230,halign:'center',align:'left'"> 操作 </th>
+										<th data-options="field:'name',width:130,halign:'center',align:'left'"> 账号</th>
+                                        <th data-options="field:'module',width:130,halign:'center',align:'left'"> 姓名</th>
+                                        <th data-options="field:'address',width:120,halign:'center',align:'left'"> 所属部门 </th>
+                                        <th data-options="field:'depict',width:50,halign:'center',align:'left'"> 性别</th>
+                                        <th data-options="field:'order',width:120,halign:'center',align:'center'">电话 </th>
+                                        <th data-options="field:'des',width:120,halign:'center',align:'left'"> 手机 </th>
+                                        <th data-options="field:'status',width:150,halign:'center',align:'center'"> 角色 </th>
+                                        <th data-options="field:'access',width:50,halign:'center',align:'right'"> 状态 </th>
+									</tr>
+								</thead>
+								<tr>
+									<td>1</td>
+									<td>[修改][删除][初始密码][启用]</td>
+									<td>sfjg</td>
+									<td>张三</td>
+									<td>机械工程部</td>
+									<td>男</td>
+									<td>041188994567</td>
+									<td>13500791234</td>
+									<td>管理员</td>
+									<td>锁定</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>[修改][删除][初始密码][停用]</td>
+									<td>lisi</td>
+									<td>李四</td>
+									<td>总经理办公室</td>
+									<td>男</td>
+									<td>041188994567</td>
+									<td>13500791234</td>
+									<td>副总经理,部长</td>
+									<td>启用</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
