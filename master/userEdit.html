@@ -1,0 +1,106 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>用户管理-录入</title>
+	<link rel="stylesheet" type="text/css" href="../Resource/CSS/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/demo.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/icon.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/main.css">
+    <script type="text/javascript" src="../Resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Resource/js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../Resource/js/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="subbody">
+	<table width="100%" height="100%">
+		<tr valign="top">
+			<td align="center">
+				<table width="660px">
+					<tr>&nbsp;</tr>
+					<tr>&nbsp;</tr>
+					<tr height="40px" valign="top">
+						<td class="td-title" width="80px" align="right">账号：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+						<td class="td-title" width="80px" align="right">密码：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+					</tr>	
+					<tr height="40px" valign="top">
+						<td class="td-title" width="80px" align="right">姓名：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+						<td class="td-title" width="80px" align="right">性别：</td>
+						<td class="td-content">
+                            <select id="select" class="easyui-combobox" name="select" style="width:250px;height:32px;">
+                                <option value="man">男</option>
+                                <option value="woman">女</option>
+                            </select>
+                        </td>
+					</tr>
+					<tr height="40px" valign="top">
+						<td class="td-title" width="80px" align="right">电话：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+						<td class="td-title" width="80px" align="right">手机：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+					</tr>
+					<tr height="40px" valign="top">
+						<td class="td-title" width="80px" align="right">邮箱：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+						<td class="td-title" width="80px" align="right">所属部门：</td>
+						<td class="td-content" >
+							<select id="select" class="easyui-combobox" name="select" style="width:250px;height:32px;">
+                            </select>
+						</td>
+					</tr>
+					<tr height="40px" valign="top">
+						<td class="td-title" width="80px" align="right">排序号：</td>
+						<td class="td-content" >
+							<input style="width: 250px;height: 32px" class="easyui-textbox" value="">
+						</td>
+						<td class="td-title" width="80px" align="right">状态：</td>
+						<td class="td-content">
+							<select id="select" class="easyui-combobox" name="select" style="width:250px;height:32px;">
+								<option>启用</option>
+								<option>停用</option>
+                            </select>
+						</td>
+					</tr>
+					<tr height="40px" valign="top">
+						<td class="td-title" width="80px" align="right">角色：</td>
+					    <td class="td-content" width="250">
+                            <div class="easyui-datalist" title="" style="width:250px;height:130px" data-options="method: 'get',checkbox: true,selectOnCheck: false,onBeforeSelect: function(){return false;}">
+                                <li value="AL1">管理员</li>
+                                <li value="AL2">普通职员</li>
+                                <li value="AL3">主任</li>
+                                <li value="AL4">科长</li>
+                                <li value="AL5">部长</li>
+                                <li value="AL6">副总经理</li>
+                                <li value="AL7">总经理</li>
+                            </div>
+                        </td>
+                        <td class="td-title" width="80px" align="right">备注：</td>
+                        <td class="td-content">
+                            <input class="easyui-textbox" data-options="multiline:true" style="width:250px;height:130px;" value="">
+                        </td>
+					</tr>	
+				   <tr height="40px" valign="top">
+                    	<td colspan="4" align="right">
+                    		<a href="user.html" class="easyui-linkbutton" data-options="iconCls:'icon-save'">&nbsp;保&nbsp;&nbsp;&nbsp;存&nbsp;</a>
+                    		<a href="user.html" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">&nbsp;取&nbsp;&nbsp;&nbsp;消&nbsp;</a>
+                    	</td>
+                    </tr>	
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
