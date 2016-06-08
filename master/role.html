@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>角色管理</title>
+	<link rel="stylesheet" type="text/css" href="../Resource/CSS/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/demo.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/icon.css">
+    <link rel="stylesheet" type="text/css" href="../Resource/CSS/main.css">
+    <script type="text/javascript" src="../Resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Resource/js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../Resource/js/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="subbody">
+	<table width="100%" height="100%">
+		<tr valign="top">
+			<td align="center">
+				<table>
+					<tr>
+					<table width="100%" height="100%">
+                    <tr>
+                        <!-- 第一列 -->
+						 <td width="50%">
+							<table width="100%" height="100%">
+								 <tr height="20px" valign="top">
+									<td>
+										<a href="roleEdit.html" class="easyui-linkbutton" data-options="iconCls:'icon-add'">&nbsp;新&nbsp;&nbsp;增&nbsp;</a>
+									</td>
+									<td align="right" nowrap="nowrap">
+										角色名称：&nbsp;
+										<input class="easyui-textbox" style="width:250px; height:32px" value=""> &nbsp;&nbsp;&nbsp;
+										<a href="roleEdit.html" class="easyui-linkbutton" data-options="iconCls:'icon-search'">&nbsp;查&nbsp;&nbsp;询&nbsp;</a>
+									</td>
+								</tr> 
+								<tr height="100%">
+									<td colspan="2">
+										<table style="width: 100%;height: 100%" class="easyui-datagrid" data-options="singleSelect:true,collapsible:true,method:'get'">
+                                            <thead>
+                                                <tr>
+                                                    <th data-options="field:'no',width:50,halign:'center',align:'center'"> 序号 </th>
+                                                    <th data-options="field:'do',width:120,halign:'center',align:'center'"> 操作 </th>
+                                                    <th data-options="field:'name',width:100,halign:'center',align:'left'"> 角色名称 </th>
+                                                    <th data-options="field:'module',width:100,halign:'center',align:'left'"> 角色描述 </th>
+                                                    <th data-options="field:'address',width:50,halign:'center',align:'left'"> 排序号 </th>
+                                                    <th data-options="field:'depict',width:130,halign:'center',align:'left'"> 备注 </th>
+                                                </tr>
+                                            </thead>
+											<tbody>
+											    <tr>
+												    <td>1</td>
+													<td>[修改] [删除]</td>
+													<td>系统管理员</td>
+													<td>系统管理</td>
+													<td>1010</td>
+													<td>无</td>
+												</tr>
+											</tbody>
+                                        </table>
+									</td>
+								</tr>
+							</table>
+						</td> 
+						<!-- 第二列 -->
+						<td  width="25%">
+                            <table width="100%" height="100%">
+                                <tr height="20px" valign="top">
+                                    <td >
+                                        <A href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">&nbsp;全&nbsp;&nbsp;选&nbsp;</A>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <A href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">&nbsp;重&nbsp;&nbsp;置&nbsp;</A>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <A href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">&nbsp;保&nbsp;&nbsp;存&nbsp;</A>
+                                    </td>
+                                </tr>
+                                <tr height="100%" >
+                                    <td >
+                                        <div class="easyui-panel" style="padding:5px; width:100%; height:100%">
+                                            <ul id="tt" class="easyui-tree" data-options="url:'_tree_menu.json',method:'get',animate:true,checkbox:true,lines:true">
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <!--第三列 start-->
+                        <td width="25%">
+                            <table width="100%" height="100%">
+                                <tr height="20px" valign="top">
+                                    <td >
+                                        <A href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">&nbsp;全&nbsp;&nbsp;选&nbsp;</A>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <A href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">&nbsp;重&nbsp;&nbsp;置&nbsp;</A>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <A href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">&nbsp;保&nbsp;&nbsp;存&nbsp;</A>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="easyui-panel" style="padding:5px; width:100%; height:100%">
+                                            <ul id="tt" class="easyui-tree" data-options="url:'_tree_agency.json',method:'get',animate:true,checkbox:true,lines:true">
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>            
+</body>
+</html>

@@ -1,0 +1,5 @@
+function abcd()
+{
+	alert("abcd");
+}
+

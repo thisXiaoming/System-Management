@@ -1,0 +1,138 @@
+<html "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+	<meta charset="UTF-8">
+	<title>节能监管子系统 </title>
+	<link rel="stylesheet" type="text/css" href="../Resource/CSS/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../Resource/CSS/icon.css">
+	<script type="text/javascript" src="../Resource/JS/jquery.min.js"></script>
+	<script type="text/javascript" src="../Resource/JS/jquery.easyui.min.js"></script>
+</head>
+
+<script type="text/javascript">
+	 $(function(){
+	 	$('#tabs').tabs({
+	 		onSelect:function(){
+	 			selTab();
+	 		}
+	 	});
+	 })
+	 function selTab(){
+	 	var tab=$('#tabs').tabs('getSelected')
+	 	//子系统管理
+	 	if(tab.attr("id")=='subsysTab'){
+	 		if(document.getElementById("subsysFrame").src==''){
+	 			document.getElementById("subsysFrame").src='subsys.html';
+	 		}
+	 	}
+
+	 	//菜单管理
+	 	if(tab.attr("id")=='menuTab'){
+	 		if(document.getElementById('menuFrame').src==''){
+	 			document.getElementById('menuFrame').src='menu.html';
+	 		}
+	 	}
+
+	 	//部门管理
+	 	if(tab.attr("id")=='deptTab'){
+	 		if(document.getElementById("deptFrame").src==''){
+	 			document.getElementById("deptFrame").src='dept.html';
+	 		}
+	 	}
+
+	 	//用户管理
+	 	if(tab.attr("id")=="userTab"){
+	 		if(document.getElementById("userFrame").src==''){
+	 			document.getElementById("userFrame").src='user.html';
+	 		}
+	 	}
+
+	 	//角色管理
+	 	if(tab.attr("id")=='roleTab'){
+	 		if(document.getElementById("roleFrame").src==''){
+	 			document.getElementById("roleFrame").src='role.html';
+	 		}
+	 	}
+
+	 	// 系统监测
+    if (tab.attr("id") == 'monitorSysTab') {
+        if (document.getElementById("monitorSysFrame").src=='') {
+		    document.getElementById("monitorSysFrame").src='monitorSys.html';
+        }
+    }
+
+	// 系统公告-一览
+	    if (tab.attr("id") == 'noticeTab') {
+        if (document.getElementById("noticeFrame").src=='') {
+		    document.getElementById("noticeFrame").src='notice.html';
+        }
+    }
+
+	// 在线用户监测
+	    if (tab.attr("id") == 'monitorOnlineTab') {
+        if (document.getElementById("monitorOnlineFrame").src=='') {
+		    document.getElementById("monitorOnlineFrame").src='monitorOnline.html';
+        }
+    }
+	// 价格管理-一览
+	    if (tab.attr("id") == 'priceTab') {
+        if (document.getElementById("priceFrame").src=='') {
+		    document.getElementById("priceFrame").src='price.html';
+        }
+    }
+	 }
+
+
+</script>
+
+<body class="easyui-layout" style="font-family: verdana,helvetica,arial,sans-serif; font-size: 12px">
+	<div data-options="region:'north'" style="height: 101px; border: 0; overflow: hidden;">
+		<iframe src="../top.html" width="100%" height="100px" border-bottom="1px" scrolling="no" style="width: 100%; height: 100%;"></iframe>
+	</div>
+
+	<div id="tabs" class="easyui-tabs" data-options="region:'center'">
+
+		<div title="主页" data-options="closable:'true'" style="background: url(../Resource/Image/background.jpg);">
+			<iframe scrolling="yes" frameborder="0"></iframe>
+		</div>
+
+			<div id="subsysTab" title="子系统管理" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+				<iframe id="subsysFrame" scrolling="yes" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+			</div>
+
+		<div id="menuTab" title="菜单管理" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+				<iframe id="menuFrame" scrolling="yes" frameborder="0" style="width: 100%; height: 100%"></iframe>
+		</div>
+
+		<div id="deptTab" title="部门管理" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="deptFrame" scrolling="yes" frameborder="0" style="width: 100%; height: 100%"></iframe>
+		</div>
+
+		<div id="userTab" title="用户管理" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="userFrame" scrolling="yes" frameborder="0" style="width: 100%; height: 100%"></iframe>
+		</div>
+
+		<div id="roleTab" title="角色管理" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="roleFrame" scrolling="yes" frameborder="0" style="width: 100%; height: 100%"></iframe>
+		</div>
+
+		<div id="monitorSysTab" title="系统监测" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="monitorSysFrame" scrolling="yes" frameborder="0" style="width: 100%; height: 100%"></iframe>
+		</div>
+		
+		<div id="noticeTab" title="系统公告" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="noticeFrame" scrolling="yes" frameborder="0" style="width:100%;height:100%;"></iframe>
+		</div>
+
+		<div id="monitorOnlineTab" title="在线用户监测" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="monitorOnlineFrame" scrolling="yes" frameborder="0" style="width:100%;height:100%;"></iframe>
+		</div>
+
+		<div id="priceTab" title="价格管理" data-options="closable:true" style="background:url(../Resource/Image/background.jpg); ">
+			<iframe id="priceFrame" scrolling="yes" frameborder="0" style="width:100%;height:100%;"></iframe>
+		</div>
+	</div>
+	<div data-options="region:'south'" style="border:0">
+		<iframe src="../footer.html" width="100%" height="20px" frameborder="0" scrolling="no"></iframe>
+	</div>
+</body>
+</html>
